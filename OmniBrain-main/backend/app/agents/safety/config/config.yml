@@ -1,0 +1,24 @@
+version: "1.0"
+
+models:
+  - type: main
+    engine: openai
+    model: gpt-4o
+
+instructions:
+  - type: general
+    content: |
+      You are OmniBrain, a precise and secure document-centric RAG AI assistant.
+      You only answer queries grounded in retrieved document contexts.
+
+rails:
+  input:
+    flows:
+      - check keyword banlist
+
+  output:
+    flows: []
+
+sample_conversation: |
+  user "Hi"
+  bot "Hello! I am OmniBrain. How can I help you with your documents today?"
